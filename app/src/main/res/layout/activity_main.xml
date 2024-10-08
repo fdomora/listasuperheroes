@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/heroe_imagen"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@android:drawable/ic_menu_camera"/>
+
+        <EditText
+            android:id="@+id/heroe_nom_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/heroe_imagen"
+            android:layout_alignTop="@id/heroe_imagen"
+            android:layout_marginStart="16dp"
+            android:hint="Nombre del superheroe"/>
+
+        <EditText
+            android:id="@+id/alter_nom_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/heroe_imagen"
+            android:layout_alignBottom="@id/heroe_imagen"
+            android:layout_marginStart="24dp"
+            android:hint="Nombre vida real"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_below="@id/heroe_imagen"
+            android:layout_marginTop="16dp"
+            android:background="@color/black"/>
+
+        <TextView
+            android:id="@+id/bio_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_below="@id/divider"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="Biografia"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bio_edit"
+            android:layout_below="@id/bio_text"
+            android:layout_marginTop="16dp"
+            android:hint="Capturar biografia corta"/>
+
+       <TextView
+           android:id="@+id/poder_text"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="16dp"
+           android:textColor="@color/black"
+           android:layout_below="@id/bio_edit"
+           android:gravity="center"
+           android:textSize="20sp"
+           android:text="Poder"/>
+
+        <RatingBar
+            android:id="@+id/poder_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/poder_text"
+            android:progressTint="@color/yellow"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/guardar_boton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="111dp"
+            android:text="Guardar" />
+
+    </RelativeLayout>
+</layout>
